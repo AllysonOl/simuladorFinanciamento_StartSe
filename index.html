@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador de Financiamento</title>
+  <style>
+    body {
+      background-color: rgb(15, 182, 238);
+      color: white;
+      font-size: 11pt Tahoma;
+    }
+
+    tr:nth-child(even) {
+      background-color: lightgray;
+    }
+
+    table, th, td {
+      border: 1px solid white;
+      border-collapse: collapse;
+      padding: 15px;
+    }
+
+    button {
+      background-color: hsl(221, 70%, 35%);
+      color: white;
+    }
+
+  </style>
+</head>
+<body>
+  <h2>Simulador de Financiamento com Sistema de Amortização Constante (SAC)</h2>
+  <input type="text" id="textoValor" placeholder="Valor do Bem">
+  <input type="text" id="textoEntrada" placeholder="Valor da Entrada">
+  <input type="text" id="textoTaxaJuros" placeholder="Taxa de Juros (%)">
+  <input type="text" id="textoPrazo" placeholder="Prazo (em meses)">
+  <button id="botaoCalcular"> Calcular </button>
+  <input type="checkbox" id="comCarencia">Com carência?
+  <select id="listaSuspensa" hidden>
+    <option value="2">2 meses</option>
+    <option value="3">3 meses</option>
+    <option value="4">4 meses</option>
+  </select>
+  <p>
+    <table>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Valor da Parcela</th>
+          <th>Amortização</th>
+          <th>Juros</th>
+          <th>Saldo Devedor </th>
+        </tr>
+      </thead>
+      <tbody id="corpoTabela">
+
+      </tbody>
+    </table>
+  </p>
+  <script type="module" src="index.js"></script>
+</body>
+</html>
